@@ -1,4 +1,4 @@
-# Wuwei Foundation Website
+# Wu Wei Foundation Website
 
 Static website prepared for GitHub Pages.
 
@@ -13,3 +13,7 @@ Static website prepared for GitHub Pages.
    `https://YOUR-USERNAME.github.io/wuwei-foundation/`
 
 For a root-level address such as `https://YOUR-USERNAME.github.io/`, name the repository exactly `YOUR-USERNAME.github.io`.
+
+## Languages
+
+The site includes English and Simplified Chinese versions. The language switch in the top navigation opens the corresponding page.

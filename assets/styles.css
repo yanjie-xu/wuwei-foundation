@@ -429,3 +429,39 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
   background: #eef7f1;
 }
 
+
+
+/* Bilingual navigation and Chinese typography */
+.site-nav .lang-switch {
+  min-width: 48px;
+  padding: .48rem .72rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-align: center;
+  color: var(--forest-deep);
+  font-weight: 800;
+  line-height: 1;
+}
+.site-nav .lang-switch:hover,
+.site-nav .lang-switch:focus {
+  border-color: var(--jade);
+  background: rgba(15,138,105,.08);
+  color: var(--forest-deep);
+}
+html[lang^="zh"] body {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Inter, sans-serif;
+  letter-spacing: .01em;
+}
+html[lang^="zh"] h1,
+html[lang^="zh"] h2,
+html[lang^="zh"] h3,
+html[lang^="zh"] .quote-block,
+html[lang^="zh"] .mission-artwork figcaption {
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", Georgia, serif;
+  letter-spacing: -.015em;
+}
+html[lang^="zh"] .eyebrow { letter-spacing: .12em; }
+html[lang^="zh"] .marquee span { letter-spacing: .1em; }
+@media (max-width: 960px) {
+  .site-nav .lang-switch { width: 100%; padding: .8rem 1rem; }
+}

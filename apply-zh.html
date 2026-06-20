@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="向无畏基金会提交公益项目资助申请。">
+  <meta name="theme-color" content="#0a5a3d">
+  <meta property="og:image" content="assets/wuwei_square.png">
+  <title>申请资助｜Wu Wei Foundation 无畏基金会</title>
+  <link rel="icon" href="assets/icon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="alternate" hreflang="en" href="apply.html">
+</head>
+<body data-lang="zh">
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index-zh.html" aria-label="Wu Wei Foundation 无畏基金会首页">
+        <img src="assets/wuwei-foundation-logo.png" alt="Wu Wei Foundation 标志">
+        <span>Wu Wei Foundation<small>慈悲化为行动</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="打开导航菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index-zh.html#mission">关于我们</a>
+        <a href="index-zh.html#work">我们的工作</a>
+        <a href="apply-zh.html">申请资助</a>
+        <a href="transparency-zh.html">透明度</a>
+        <a class="btn btn-primary" href="index-zh.html#donate">捐赠</a>
+        <a class="lang-switch" href="apply.html" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero"><div class="container"><div class="breadcrumb">首页 / 申请资助</div><span class="eyebrow">项目支持</span><h1>让有意义的工作持续成长。</h1><p class="lede">请告诉我们社群面临的需要、您计划采取的行动，以及项目将如何创造明确的公共利益。</p></div></section>
+
+    <section class="section">
+      <div class="container application-layout">
+        <aside class="application-note">
+          <span class="eyebrow" style="color:#8dd8bd">申请前须知</span>
+          <h2 style="font-size:2.4rem;color:#fff">清晰的方案有助于我们负责任地评估。</h2>
+          <p>我们可考虑支持人道救助、心理健康、社群韧性、动物保护、野生动物救助及生态慈悲等领域的项目。</p>
+          <p>提交申请并不保证获得资助。决定将综合考虑公益使命契合度、可行性、治理、透明度、可用资金及预期公共利益。</p>
+          <p><strong>请准备：</strong>项目摘要、预算、时间表、机构信息，以及适用情况下的保护措施与成果报告计划。</p>
+        </aside>
+
+        <form id="grant-application" class="form-card">
+          <span class="eyebrow">资助申请</span>
+          <h2 style="font-size:3rem">项目信息</h2>
+          <div class="form-grid">
+            <div class="field"><label for="organisation">机构或申请人名称</label><input id="organisation" name="机构或申请人" required></div>
+            <div class="field"><label for="contact">联系人</label><input id="contact" name="联系人" required></div>
+            <div class="field"><label for="email">电子邮箱</label><input id="email" name="电子邮箱" type="email" required></div>
+            <div class="field"><label for="country">国家或地区</label><input id="country" name="国家或地区" required></div>
+            <div class="field full"><label for="category">项目类别</label><select id="category" name="项目类别" required><option value="">请选择</option><option>人道或灾难救助</option><option>心理健康或创伤支持</option><option>社群韧性</option><option>动物保护或野生动物救助</option><option>生态慈悲</option><option>其他公益目的</option></select></div>
+            <div class="field full"><label for="summary">项目摘要</label><textarea id="summary" name="项目摘要" required placeholder="请说明需求、拟采取的行动以及受益人群。"></textarea></div>
+            <div class="field"><label for="amount">申请金额</label><input id="amount" name="申请金额" placeholder="欧元或当地货币" required></div>
+            <div class="field"><label for="duration">项目周期</label><input id="duration" name="项目周期" placeholder="例如：6 个月" required></div>
+            <div class="field full"><label for="budget">预算概览</label><textarea id="budget" name="预算概览" required placeholder="请列出主要费用类别与金额。"></textarea></div>
+            <div class="field full"><label for="impact">预期公共利益与成果</label><textarea id="impact" name="预期公共利益与成果" required placeholder="项目将带来什么改变？您将如何衡量？"></textarea></div>
+            <div class="field full"><label for="governance">治理、保护措施与财务控制</label><textarea id="governance" name="治理、保护措施与财务控制" placeholder="请说明资金负责人、审批机制、保护措施与报告安排。"></textarea></div>
+            <div class="field full"><label for="links">网站或支持文件链接</label><textarea id="links" name="支持文件链接" placeholder="可填写注册信息、报告、预算或项目证据的公开链接。"></textarea></div>
+          </div>
+          <div class="form-actions"><button class="btn btn-primary" type="submit">准备申请邮件</button><button class="btn btn-secondary" id="download-application" type="button">下载草稿</button></div>
+          <p id="form-status" class="form-status" role="status">此静态表单将生成邮件或可下载的草稿。请在发送前自行添加支持文件附件。</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="assets/wuwei-foundation-logo.png" alt="Wu Wei Foundation 标志"><h3>Wu Wei Foundation</h3><p>滋养生命、重燃希望，陪伴社群无畏成长。</p></div>
+        <div class="footer-col"><h3>探索</h3><a href="index-zh.html#mission">关于我们</a><a href="index-zh.html#work">我们的工作</a><a href="apply-zh.html">申请资助</a><a href="transparency-zh.html">透明度</a></div>
+        <div class="footer-col"><h3>联系</h3><a href="mailto:info@wuwei-institute.com">info@wuwei-institute.com</a><a href="transparency-zh.html">法律与公开信息</a><a href="index-zh.html#donate">捐赠</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year></span> Stichting Wuwei Foundation</span><span>所有申请均由理事会独立审核。</span></div>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

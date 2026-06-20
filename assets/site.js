@@ -24,6 +24,9 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const yearEl = document.querySelector('[data-year]');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+const pageLanguage = document.documentElement.lang || document.body.dataset.lang || 'en';
+const isChinese = pageLanguage.toLowerCase().startsWith('zh');
+
 const applicationForm = document.querySelector('#grant-application');
 if (applicationForm) {
   const status = document.querySelector('#form-status');
@@ -33,22 +36,22 @@ if (applicationForm) {
   };
 
   document.querySelector('#download-application')?.addEventListener('click', () => {
-    const text = `WUWEI FOUNDATION - FUNDING APPLICATION\n\n${collect()}\n`;
+    const text = `WU WEI FOUNDATION - FUNDING APPLICATION\n\n${collect()}\n`;
     const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Wuwei_Foundation_Funding_Application.txt';
+    a.download = 'Wu_Wei_Foundation_Funding_Application.txt';
     a.click();
     URL.revokeObjectURL(url);
-    status.textContent = 'Your application draft has been downloaded.';
+    status.textContent = isChinese ? '申请草稿已下载。' : 'Your application draft has been downloaded.';
   });
 
   applicationForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const subject = encodeURIComponent('Funding Application - Wuwei Foundation');
+    const subject = encodeURIComponent('Funding Application - Wu Wei Foundation');
     const body = encodeURIComponent(collect());
     window.location.href = `mailto:info@wuwei-institute.com?subject=${subject}&body=${body}`;
-    status.textContent = 'Your email application is ready to send.';
+    status.textContent = isChinese ? '申请邮件已准备好，请在邮箱中确认并发送。' : 'Your email application is ready to send.';
   });
 }
