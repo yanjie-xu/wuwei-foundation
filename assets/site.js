@@ -8,7 +8,7 @@ const SITE_COPY = {
   applicationEmailReady: pageIsZh ? '申请邮件已准备好，请确认后发送。' : 'Your email application is ready to send.',
   donationAvailableSoon: pageIsZh ? '即将开放' : 'Available soon',
   donationOpen: pageIsZh ? '安全捐赠已开放' : 'Secure donations are open',
-  donationPending: pageIsZh ? 'Stripe 正在准备中' : 'Stripe activation pending'
+  donationPending: pageIsZh ? '捐赠支付正在准备中' : 'Donation payments preparing'
 };
 
 const navToggle = document.querySelector('.nav-toggle');
@@ -69,20 +69,17 @@ ${collect()}
   });
 }
 
-// Stripe Payment Link activation layer.
+// Donation payment link activation layer.
 const donationConfig = window.WUWEI_DONATION_CONFIG;
 const donationLinks = document.querySelectorAll('[data-donation-link]');
 const donationStatus = document.querySelector('[data-donation-status]');
 
 if (donationLinks.length) {
-  const validStripeLink = (value) => {
+  const validPaymentLink = (value) => {
     if (typeof value !== 'string' || !value.trim()) return false;
     try {
       const url = new URL(value);
-      return url.protocol === 'https:' && (
-        url.hostname === 'buy.stripe.com' ||
-        url.hostname.endsWith('.stripe.com')
-      );
+      return url.protocol === 'https:';
     } catch (error) {
       return false;
     }
@@ -93,7 +90,7 @@ if (donationLinks.length) {
   donationLinks.forEach((link) => {
     const kind = link.dataset.donationLink;
     const url = donationConfig?.[kind];
-    const linkReady = Boolean(donationConfig?.enabled && validStripeLink(url));
+    const linkReady = Boolean(donationConfig?.enabled && validPaymentLink(url));
     if (linkReady) {
       activeLinkCount += 1;
       link.href = url;

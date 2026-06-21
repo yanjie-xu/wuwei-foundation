@@ -43,15 +43,17 @@ not send data to a server or store submissions.
 - The symbolic logo remains in the dedicated Our Symbol section.
 
 
-Stripe donation activation
+Donation payment activation
 --------------------------
 The donation buttons are already prepared but disabled.
-When Stripe is ready, edit only assets/donation-config.js:
+When payment accounts are ready, edit assets/donation-config.js:
 - paste the one-time Payment Link
 - paste the monthly Payment Link
+- add WeChat Pay and Alipay payment links or QR-code landing page links when available
+- enable supported options such as Visa, Mastercard, American Express, PayPal, iDEAL, WeChat Pay and Alipay
 - change enabled from false to true
 
-Set both Stripe Payment Links to redirect successful donors to:
+Set payment links to redirect successful donors to:
 https://YOUR-DOMAIN/donation-thank-you.html
 
 The thank-you page lets donors create a branded acknowledgement certificate.

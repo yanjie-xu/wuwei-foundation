@@ -192,30 +192,42 @@
             <div>
               <span class="eyebrow">支持捐赠</span>
               <h2>让善意拥有持续发生的力量。</h2>
-              <p class="lede">网站已预留 Stripe 捐赠入口。等基金会银行账户与 Stripe 账号准备就绪后，只需填入 Payment Link 即可启用。</p>
+              <p class="lede">网站已预留在线捐赠入口。等基金会银行账户、Stripe 账号以及其他区域性支付账户准备就绪后，只需填入相应的支付链接或二维码信息即可启用。</p>
             </div>
-            <span class="donation-status" data-donation-status>Stripe 正在准备中</span>
+            <span class="donation-status" data-donation-status>捐赠支付正在准备中</span>
           </div>
 
           <div class="donation-options" aria-label="捐赠方式">
             <article class="donation-card">
               <span class="donation-card-kicker">单次支持</span>
               <h3>一次性捐赠</h3>
-              <p>适合希望即时支持人道救助、心理关怀、动物保护与社区项目的捐赠者。</p>
+              <p>适合希望即时支持人道救助、心理关怀、动物保护与社区项目的捐赠者。未来将支持 Visa、Mastercard、American Express、PayPal、iDEAL、微信支付与支付宝等方式。</p>
               <a class="btn btn-primary donation-link is-disabled" href="#" data-donation-link="oneTime" data-active-label="立即单次捐赠" aria-disabled="true">即将开放</a>
             </article>
             <article class="donation-card featured">
               <span class="donation-card-kicker">持续支持</span>
               <h3>每月捐赠</h3>
-              <p>用稳定、长期的方式支持基金会开展持续性工作与面向未来的公益项目。</p>
+              <p>用稳定、长期的方式支持基金会开展持续性工作与面向未来的公益项目。可用支付方式将随捐赠账户开通后逐步启用。</p>
               <a class="btn btn-primary donation-link is-disabled" href="#" data-donation-link="monthly" data-active-label="立即月捐" aria-disabled="true">即将开放</a>
+            </article>
+            <article class="donation-card">
+              <span class="donation-card-kicker">扫码捐赠</span>
+              <h3>微信支付</h3>
+              <p>适合希望通过微信扫码完成捐赠的支持者。待支付账户准备完成后，可加入二维码或支付链接。</p>
+              <a class="btn btn-primary donation-link is-disabled" href="#" data-donation-link="wechatPay" data-active-label="使用微信支付捐赠" aria-disabled="true">即将开放</a>
+            </article>
+            <article class="donation-card">
+              <span class="donation-card-kicker">区域支付</span>
+              <h3>支付宝</h3>
+              <p>支付宝将作为额外的扫码或支付链接方式，待账户与支付信息确认后启用。</p>
+              <a class="btn btn-primary donation-link is-disabled" href="#" data-donation-link="alipay" data-active-label="使用支付宝捐赠" aria-disabled="true">即将开放</a>
             </article>
           </div>
 
           <div class="donation-aftercare">
             <div>
               <span class="donation-aftercare-icon" aria-hidden="true">✓</span>
-              <div><strong>付款回执</strong><p>Stripe 启用后，可自动向捐赠者发送付款回执。</p></div>
+              <div><strong>付款回执</strong><p>捐赠成功后，可通过相应支付服务向捐赠者发送付款确认或回执。</p></div>
             </div>
             <div>
               <span class="donation-aftercare-icon" aria-hidden="true">✦</span>
@@ -223,7 +235,7 @@
             </div>
             <div>
               <span class="donation-aftercare-icon" aria-hidden="true">↗</span>
-              <div><strong>后续只需填链接</strong><p>未来只需在 <code>assets/donation-config.js</code> 中填入 Stripe Payment Link，即可激活按钮。</p></div>
+              <div><strong>支持链接与二维码</strong><p>未来只需加入相应支付链接或二维码信息，即可启用银行卡、PayPal、iDEAL、微信支付与支付宝等捐赠方式。</p></div>
             </div>
           </div>
 
@@ -232,7 +244,7 @@
             <a class="btn btn-secondary" href="mailto:info@wuwei-institute.com?subject=%E6%8D%90%E8%B5%A0%E5%92%A8%E8%AF%A2">咨询捐赠</a>
           </div>
 
-          <p class="donation-note">当前在线支付尚未启用。待基金会 Stripe 账号与银行结算信息准备完成后，只需在 <code>assets/donation-config.js</code> 中填入单次捐赠与月捐链接，并将 <code>enabled</code> 改为 <code>true</code> 即可上线。</p>
+          <p class="donation-note">当前在线支付尚未启用。网站已预留在线捐赠入口；待基金会银行账户、Stripe 账号以及其他区域性支付账户准备完成后，只需填入对应的 Payment Link 或二维码支付信息，并将 <code>enabled</code> 改为 <code>true</code> 即可上线。计划支持 Visa、Mastercard、American Express、PayPal、iDEAL、微信支付与支付宝等方式。</p>
         </div>
       </div>
     </section>

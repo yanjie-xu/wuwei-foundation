@@ -15,18 +15,18 @@ Static website prepared for GitHub Pages.
 For a root-level address such as `https://YOUR-USERNAME.github.io/`, name the repository exactly `YOUR-USERNAME.github.io`.
 
 
-## Stripe donations (prepared, not yet active)
+## Donation payments (prepared, not yet active)
 
 The donation interface is already built and remains in a safe “Available soon” state.
 
-When the Stripe account is ready:
+When the payment accounts are ready:
 
-1. Create one live **one-time donation** Payment Link.
-2. Create one live **monthly donation** Payment Link.
-3. In Stripe, enable collection of the donor’s email address and payment receipts.
-4. Set each Payment Link’s post-payment redirect to:
+1. Create live **one-time donation** and **monthly donation** payment links.
+2. Enable available payment methods such as Visa, Mastercard, American Express, PayPal, iDEAL, Apple Pay, Google Pay, WeChat Pay and Alipay where supported by the payment provider.
+3. Add WeChat Pay and Alipay QR-code details or links when those accounts are available.
+4. Set payment links to redirect successful donors to:
    `https://YOUR-DOMAIN/donation-thank-you.html`
-5. Open `assets/donation-config.js`, paste the two URLs, and change `enabled` to `true`.
+5. Open `assets/donation-config.js`, paste the URLs or payment details, and change `enabled` to `true`.
 
 No other website code needs to be edited.
 
