@@ -38,6 +38,8 @@ not send data to a server or store submissions.
 
 
 2026 update:
-- Favicon and app icons now use assets/wuwei_square.png.
+- Header and symbol logos use the approved smaller-seed design.
+- Footer logos use a white-and-orange dark-background variant.
+- Favicon, app, and social-preview icons use the white-and-orange mark on green.
 - The home hero and mission sections now feature the founder's original artworks from the assets folder.
 - The symbolic logo remains in the dedicated Our Symbol section.

@@ -3,8 +3,8 @@
   "short_name": "Wu Wei",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#fffdfa",
-  "theme_color": "#0a5a3d",
+  "background_color": "#016b54",
+  "theme_color": "#016b54",
   "icons": [
     {
       "src": "assets/icon-192.png",
