@@ -40,7 +40,7 @@ not send data to a server or store submissions.
 2026 update:
 - Favicon and app icons now use assets/wuwei_square.png.
 - The home hero and mission sections now feature the founder's original artworks from the assets folder.
-- The symbolic logo remains in the dedicated Our Symbol section.
+- The former Our Symbol section has been repurposed as a News & Activities placeholder while keeping the original layout and image placement.
 
 
 Donation payment activation

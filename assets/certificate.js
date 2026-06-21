@@ -91,10 +91,10 @@ certificateForm?.addEventListener('submit', async (event) => {
   canvas.width = 1600;
   canvas.height = 1131;
   const ctx = canvas.getContext('2d');
-  const forest = '#0a5a3d';
-  const deep = '#063d2d';
+  const forest = '#862633';
+  const deep = '#641C29';
   const gold = '#d7a52e';
-  const ink = '#15342b';
+  const ink = '#1F1B1C';
   const sans = 'Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif';
   const serif = 'Georgia, "Songti SC", "STSong", "Noto Serif CJK SC", serif';
 
