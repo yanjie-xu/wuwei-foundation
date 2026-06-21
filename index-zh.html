@@ -7,7 +7,7 @@
   <meta name="description" content="无畏基金会通过人道救助、心理关怀、动物保护、野生动物保育与负责任的公益资助，支持处于脆弱、危机与困境中的生命和社群。">
   <meta name="theme-color" content="#0a5a3d">
   <meta property="og:image" content="assets/wuwei_square.png">
-  <title>Wu Wei Foundation 无畏基金会｜滋养生命，重燃希望</title>
+  <title>无畏基金会｜滋养生命，重燃希望</title>
   <link rel="icon" href="assets/icon-32.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="manifest" href="site.webmanifest">
@@ -18,9 +18,9 @@
   <a class="skip-link" href="#main">跳至主要内容</a>
   <header class="site-header">
     <div class="nav-wrap">
-      <a class="brand" href="index-zh.html" aria-label="Wu Wei Foundation 无畏基金会首页">
-        <img src="assets/wuwei-foundation-logo.png" alt="Wu Wei Foundation 标志">
-        <span>Wu Wei Foundation<small>慈悲化为行动</small></span>
+      <a class="brand" href="index-zh.html" aria-label="无畏基金会首页">
+        <img src="assets/wuwei-foundation-logo.png" alt="无畏基金会标志">
+        <span>无畏基金会<small>慈悲化为行动</small></span>
       </a>
       <button class="nav-toggle" aria-label="打开导航菜单" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="site-nav" aria-label="主导航">
@@ -130,7 +130,7 @@
       <div class="container symbol-grid">
         <div class="symbol-card reveal"><img src="assets/wuwei-foundation-logo.png" alt="由种子、成长之树与两道 W 水波构成的无畏基金会标志"></div>
         <div class="reveal">
-          <span class="eyebrow">我们的标志</span>
+          <span class="eyebrow">标志理念</span>
           <h2>一颗充满可能的种子。</h2>
           <p class="lede">标志讲述着关怀、成长、智慧与解脱的故事。</p>
           <div class="symbol-points">
@@ -185,14 +185,54 @@
       </div>
     </section>
 
-    <section id="donate" class="section compact">
+    <section id="donate" class="section compact donation-section">
       <div class="container">
-        <div class="cta reveal">
-          <span class="eyebrow" style="color:#b7ead7">支持我们的工作</span>
-          <h2>让一个脆弱的起点，成长为长久的力量。</h2>
-          <p>您的支持将用于负责任的公益资助、人道救助、心理与情绪恢复、动物保护，以及开展这些工作所必需的合理运营成本。</p>
-          <div class="button-row"><a class="btn btn-light" href="mailto:info@wuwei-institute.com?subject=Donation%20Enquiry">咨询捐赠</a><a class="btn btn-ghost-light" href="transparency-zh.html">了解资金管理</a></div>
-          <p style="font-size:.82rem;margin-top:1.2rem">基金会银行账户及支付渠道启用后，我们将在此公布在线捐赠信息。</p>
+        <div class="donation-panel reveal">
+          <div class="donation-intro">
+            <div>
+              <span class="eyebrow">支持捐赠</span>
+              <h2>让善意拥有持续发生的力量。</h2>
+              <p class="lede">网站已预留 Stripe 捐赠入口。等基金会银行账户与 Stripe 账号准备就绪后，只需填入 Payment Link 即可启用。</p>
+            </div>
+            <span class="donation-status" data-donation-status>Stripe 正在准备中</span>
+          </div>
+
+          <div class="donation-options" aria-label="捐赠方式">
+            <article class="donation-card">
+              <span class="donation-card-kicker">单次支持</span>
+              <h3>一次性捐赠</h3>
+              <p>适合希望即时支持人道救助、心理关怀、动物保护与社区项目的捐赠者。</p>
+              <a class="btn btn-primary donation-link is-disabled" href="#" data-donation-link="oneTime" data-active-label="立即单次捐赠" aria-disabled="true">即将开放</a>
+            </article>
+            <article class="donation-card featured">
+              <span class="donation-card-kicker">持续支持</span>
+              <h3>每月捐赠</h3>
+              <p>用稳定、长期的方式支持基金会开展持续性工作与面向未来的公益项目。</p>
+              <a class="btn btn-primary donation-link is-disabled" href="#" data-donation-link="monthly" data-active-label="立即月捐" aria-disabled="true">即将开放</a>
+            </article>
+          </div>
+
+          <div class="donation-aftercare">
+            <div>
+              <span class="donation-aftercare-icon" aria-hidden="true">✓</span>
+              <div><strong>付款回执</strong><p>Stripe 启用后，可自动向捐赠者发送付款回执。</p></div>
+            </div>
+            <div>
+              <span class="donation-aftercare-icon" aria-hidden="true">✦</span>
+              <div><strong>品牌感谢证书</strong><p>捐赠后可生成带有无畏基金会标志的感谢证书，用于留存、打印或导出 PDF。</p></div>
+            </div>
+            <div>
+              <span class="donation-aftercare-icon" aria-hidden="true">↗</span>
+              <div><strong>后续只需填链接</strong><p>未来只需在 <code>assets/donation-config.js</code> 中填入 Stripe Payment Link，即可激活按钮。</p></div>
+            </div>
+          </div>
+
+          <div class="donation-actions">
+            <a class="btn btn-secondary" href="donation-thank-you-zh.html">预览感谢证书</a>
+            <a class="btn btn-secondary" href="mailto:info@wuwei-institute.com?subject=%E6%8D%90%E8%B5%A0%E5%92%A8%E8%AF%A2">咨询捐赠</a>
+          </div>
+
+          <p class="donation-note">当前在线支付尚未启用。待基金会 Stripe 账号与银行结算信息准备完成后，只需在 <code>assets/donation-config.js</code> 中填入单次捐赠与月捐链接，并将 <code>enabled</code> 改为 <code>true</code> 即可上线。</p>
         </div>
       </div>
     </section>
@@ -200,13 +240,14 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><img src="assets/wuwei-foundation-logo-light.png" alt="Wu Wei Foundation 标志"><h3>Wu Wei Foundation</h3><p>滋养生命、重燃希望，陪伴社群无畏成长。</p></div>
+        <div class="footer-brand"><img src="assets/wuwei-foundation-logo-light.png" alt="无畏基金会标志"><h3>无畏基金会</h3><p>滋养生命、重燃希望，陪伴社群无畏成长。</p></div>
         <div class="footer-col"><h3>探索</h3><a href="index-zh.html#mission">关于我们</a><a href="index-zh.html#work">我们的工作</a><a href="apply-zh.html">申请资助</a><a href="transparency-zh.html">透明度</a></div>
         <div class="footer-col"><h3>联系</h3><a href="mailto:info@wuwei-institute.com">info@wuwei-institute.com</a><a href="transparency-zh.html">法律与公开信息</a><a href="index-zh.html#donate">捐赠</a></div>
       </div>
       <div class="footer-bottom"><span>© <span data-year></span> Stichting Wuwei Foundation</span><span>公开信息将随注册进展持续更新。</span></div>
     </div>
   </footer>
+  <script src="assets/donation-config.js"></script>
   <script src="assets/site.js"></script>
 </body>
 </html>

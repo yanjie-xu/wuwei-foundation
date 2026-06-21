@@ -38,8 +38,21 @@ not send data to a server or store submissions.
 
 
 2026 update:
-- Header and symbol logos use the approved smaller-seed design.
-- Footer logos use a white-and-orange dark-background variant.
-- Favicon, app, and social-preview icons use the white-and-orange mark on green.
+- Favicon and app icons now use assets/wuwei_square.png.
 - The home hero and mission sections now feature the founder's original artworks from the assets folder.
 - The symbolic logo remains in the dedicated Our Symbol section.
+
+
+Stripe donation activation
+--------------------------
+The donation buttons are already prepared but disabled.
+When Stripe is ready, edit only assets/donation-config.js:
+- paste the one-time Payment Link
+- paste the monthly Payment Link
+- change enabled from false to true
+
+Set both Stripe Payment Links to redirect successful donors to:
+https://YOUR-DOMAIN/donation-thank-you.html
+
+The thank-you page lets donors create a branded acknowledgement certificate.
+This certificate is not an official tax receipt.

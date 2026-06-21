@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="感谢您支持无畏基金会。您可以生成带品牌标志的捐赠感谢证书。">
+  <meta name="theme-color" content="#0a5a3d">
+  <title>感谢您的支持｜无畏基金会</title>
+  <link rel="icon" href="assets/icon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="alternate" hreflang="en" href="donation-thank-you.html">
+</head>
+<body class="thank-you-page">
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index-zh.html" aria-label="无畏基金会首页">
+        <img src="assets/wuwei-foundation-logo.png" alt="无畏基金会标志">
+        <span>无畏基金会<small>慈悲化为行动</small></span>
+      </a>
+      <div class="button-row">
+        <a class="btn btn-secondary" href="index-zh.html#donate">返回捐赠页面</a>
+        <a class="btn btn-secondary" href="donation-thank-you.html" lang="en">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero thank-you-hero">
+      <div class="narrow">
+        <span class="eyebrow">感谢支持</span>
+        <h1>感谢您让慈悲真正流动起来。</h1>
+        <p class="lede">您的支持将帮助我们滋养脆弱的起点、增强社群韧性，并守护多种生命形态。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container certificate-layout">
+        <div class="certificate-copy">
+          <span class="eyebrow">捐赠感谢</span>
+          <h2>生成您的感谢证书。</h2>
+          <p>请填写希望显示在证书上的内容。您可以下载带品牌标志的 PNG 证书，或使用浏览器打印 / 另存为 PDF。</p>
+
+          <form id="certificate-form" class="certificate-form">
+            <div class="field">
+              <label for="donor-name">显示姓名</label>
+              <input id="donor-name" name="donorName" autocomplete="name" placeholder="您的姓名或机构名称">
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="donation-amount">捐赠金额</label>
+                <input id="donation-amount" name="amount" placeholder="例如：€50">
+              </div>
+              <div class="field">
+                <label for="donation-date">捐赠日期</label>
+                <input id="donation-date" name="date" type="date">
+              </div>
+            </div>
+            <div class="field">
+              <label for="donation-reference">支付编号 <span class="optional">（选填）</span></label>
+              <input id="donation-reference" name="reference" placeholder="Stripe 回执编号或付款参考号">
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">下载证书</button>
+              <button class="btn btn-secondary" type="button" id="print-certificate">打印 / 另存为 PDF</button>
+            </div>
+            <p class="certificate-status" id="certificate-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="notice certificate-notice">
+            <strong>说明：</strong> 这是一份感谢证书，用于表示基金会对支持者的谢意与确认，并非正式的税务抵扣收据。待 Stripe 捐赠启用后，支付回执可由 Stripe 另行发送。
+          </div>
+        </div>
+
+        <article class="certificate-preview" id="certificate-preview" aria-label="证书预览">
+          <div class="certificate-border">
+            <img src="assets/wuwei-foundation-logo.png" alt="" class="certificate-logo">
+            <span class="certificate-overline">无畏基金会 · Wuwei Foundation</span>
+            <h2>感谢证书</h2>
+            <p class="certificate-subtitle">谨以衷心谢意致赠</p>
+            <strong class="certificate-name" data-certificate-name>我们的支持者</strong>
+            <p class="certificate-message">感谢您以慈悲行动，滋养生命、重燃希望，助长无畏成长。</p>
+            <dl class="certificate-details">
+              <div><dt>捐赠金额</dt><dd data-certificate-amount>谨致谢意</dd></div>
+              <div><dt>日期</dt><dd data-certificate-date>—</dd></div>
+              <div class="certificate-reference-row" hidden><dt>支付编号</dt><dd data-certificate-reference></dd></div>
+            </dl>
+            <div class="certificate-signoff">
+              <span></span>
+              <strong>无畏基金会 · Wuwei Foundation</strong>
+              <small>慈悲化为行动</small>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="assets/wuwei-foundation-logo-light.png" alt="无畏基金会标志"><h3>无畏基金会</h3><p>滋养生命、重燃希望，陪伴社群无畏成长。</p></div>
+        <div class="footer-col"><h3>探索</h3><a href="index-zh.html">首页</a><a href="index-zh.html#work">我们的工作</a><a href="transparency-zh.html">透明度</a></div>
+        <div class="footer-col"><h3>联系</h3><a href="mailto:info@wuwei-institute.com">info@wuwei-institute.com</a><a href="index-zh.html#donate">捐赠</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year></span> Stichting Wuwei Foundation</span><span>感谢您支持慈悲行动。</span></div>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+  <script src="assets/certificate.js"></script>
+</body>
+</html>

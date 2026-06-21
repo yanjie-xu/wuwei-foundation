@@ -1,4 +1,4 @@
-# Wu Wei Foundation Website
+# Wuwei Foundation Website
 
 Static website prepared for GitHub Pages.
 
@@ -14,6 +14,20 @@ Static website prepared for GitHub Pages.
 
 For a root-level address such as `https://YOUR-USERNAME.github.io/`, name the repository exactly `YOUR-USERNAME.github.io`.
 
-## Languages
 
-The site includes English and Simplified Chinese versions. The language switch in the top navigation opens the corresponding page.
+## Stripe donations (prepared, not yet active)
+
+The donation interface is already built and remains in a safe “Available soon” state.
+
+When the Stripe account is ready:
+
+1. Create one live **one-time donation** Payment Link.
+2. Create one live **monthly donation** Payment Link.
+3. In Stripe, enable collection of the donor’s email address and payment receipts.
+4. Set each Payment Link’s post-payment redirect to:
+   `https://YOUR-DOMAIN/donation-thank-you.html`
+5. Open `assets/donation-config.js`, paste the two URLs, and change `enabled` to `true`.
+
+No other website code needs to be edited.
+
+The thank-you page includes a branded certificate of appreciation that donors can download as a PNG or print/save as PDF. It is intentionally labelled as an acknowledgement rather than an official tax receipt.

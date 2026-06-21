@@ -238,7 +238,7 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
 
 .site-footer { background: #092f25; color: #fff; padding: 64px 0 30px; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr .7fr .7fr; gap: 3rem; }
-.footer-brand img { width: 90px; margin-bottom: 1rem; filter: none; opacity: 1; }
+.footer-brand img { width: 90px; margin-bottom: 1rem; opacity: .98; }
 .footer-brand p { color: rgba(255,255,255,.62); max-width: 38ch; }
 .footer-col h3 { font-family: Inter, sans-serif; font-size: .82rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 800; }
 .footer-col a { display: block; margin: .6rem 0; color: rgba(255,255,255,.72); }
@@ -429,6 +429,126 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
   background: #eef7f1;
 }
 
+
+
+/* Donation architecture and donor acknowledgement */
+.donation-section { background: linear-gradient(180deg, #f8fbf9 0%, #fffdfa 100%); }
+.donation-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.donation-panel::after {
+  content: "";
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  right: -250px;
+  top: -260px;
+  background: radial-gradient(circle, rgba(15,138,105,.12), transparent 68%);
+  pointer-events: none;
+}
+.donation-intro { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; }
+.donation-intro h2 { max-width: 15ch; }
+.donation-status {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .85rem;
+  border-radius: 999px;
+  background: #fff6d9;
+  border: 1px solid rgba(215,165,46,.3);
+  color: #6d5520;
+  font-size: .78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.donation-status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+.donation-status.is-live { color: var(--forest-deep); background: #e7f7ef; border-color: rgba(15,138,105,.28); }
+.donation-status.is-live::before { background: var(--jade); box-shadow: 0 0 0 5px rgba(15,138,105,.12); }
+.donation-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin-top: 2.4rem; }
+.donation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 300px;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fffdfa;
+}
+.donation-card.featured { background: linear-gradient(145deg, #edf6f2, #fffdfa); border-color: rgba(15,138,105,.26); }
+.donation-card-kicker { color: var(--teal); font-size: .76rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 800; }
+.donation-card h3 { margin-top: .75rem; }
+.donation-card p { color: var(--muted); flex: 1; }
+.donation-card .btn { width: 100%; margin-top: 1rem; }
+.donation-link.is-disabled { background: #dbe5e0; color: #6d8179; box-shadow: none; pointer-events: auto; cursor: not-allowed; transform: none; }
+.donation-aftercare { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.4rem; }
+.donation-aftercare > div { display: grid; grid-template-columns: 38px 1fr; gap: .8rem; padding: 1.2rem; border-radius: 16px; background: #f8fbf9; }
+.donation-aftercare-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--forest); color: #fff; font-weight: 900; }
+.donation-aftercare strong { display: block; }
+.donation-aftercare p { margin: .25rem 0 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+.donation-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.donation-note { margin: 1.2rem 0 0; padding-top: 1.2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+.donation-note code { color: var(--forest-deep); background: var(--cream); padding: .1rem .35rem; border-radius: 5px; }
+
+.thank-you-hero { text-align: center; }
+.thank-you-hero .narrow { display: grid; justify-items: center; }
+.certificate-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 3rem; align-items: start; }
+.certificate-copy { position: sticky; top: 110px; }
+.certificate-form { display: grid; gap: 1rem; margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; }
+.optional { color: var(--muted); font-weight: 500; }
+.certificate-status { min-height: 1.4em; margin: 0; color: var(--jade); font-weight: 700; }
+.certificate-notice { margin-top: 1.2rem; }
+.certificate-preview { aspect-ratio: 1.414 / 1; padding: 16px; min-height: 620px; background: #fffdfa; border: 1px solid rgba(10,90,61,.2); box-shadow: var(--shadow); }
+.certificate-border { height: 100%; padding: clamp(1rem, 2.3vw, 2.1rem) clamp(1rem, 2.6vw, 2.4rem); border: 8px solid var(--forest); outline: 2px solid var(--gold); outline-offset: -18px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; }
+.certificate-logo { width: clamp(64px, 7vw, 96px); max-height: 100px; object-fit: contain; margin-bottom: .35rem; }
+.certificate-overline { color: var(--forest); font-size: .68rem; letter-spacing: .14em; font-weight: 850; line-height: 1.4; }
+.certificate-preview h2 { font-size: clamp(1.45rem, 2.4vw, 2.55rem); margin: .35rem 0 .45rem; line-height: 1.12; }
+.certificate-subtitle { margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.4; }
+.certificate-name { display: block; margin: .55rem 0 .65rem; max-width: 18ch; overflow-wrap: anywhere; color: var(--gold); font: 700 clamp(1.35rem, 2.6vw, 2.7rem)/1.08 Georgia, serif; }
+.certificate-message { max-width: 36ch; margin: 0 auto; color: var(--ink); font-size: .98rem; line-height: 1.45; }
+.certificate-details { display: grid; grid-template-columns: repeat(2, 1fr); width: min(520px, 94%); margin: 1rem auto 0; padding-top: .9rem; border-top: 1px solid var(--line); }
+.certificate-details div { padding: 0 .65rem; }
+.certificate-details div + div { border-left: 1px solid var(--line); }
+.certificate-details dt { font-size: .66rem; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-weight: 800; }
+.certificate-details dd { margin: .2rem 0 0; font-family: Georgia, serif; color: var(--forest-deep); font-size: 1rem; overflow-wrap: anywhere; }
+.certificate-reference-row { grid-column: 1 / -1; border-left: 0 !important; margin-top: .8rem; }
+.certificate-signoff { display: grid; justify-items: center; margin-top: .9rem; }
+.certificate-signoff span { width: 180px; border-top: 1px solid var(--forest); margin-bottom: .45rem; }
+.certificate-signoff strong { line-height: 1.25; text-align: center; }
+.certificate-signoff small { color: var(--muted); letter-spacing: .12em; font-size: .62rem; line-height: 1.4; text-align: center; }
+
+@media (max-width: 960px) {
+  .donation-intro, .certificate-layout { grid-template-columns: 1fr; }
+  .donation-status { justify-self: start; }
+  .donation-aftercare { grid-template-columns: 1fr; }
+  .certificate-copy { position: static; }
+}
+
+@media (max-width: 640px) {
+  .donation-options { grid-template-columns: 1fr; }
+  .donation-panel { padding: 1.3rem; border-radius: 24px; }
+  .certificate-preview { padding: 10px; min-height: 540px; aspect-ratio: auto; }
+  .certificate-border { border-width: 5px; outline-offset: -12px; padding: 1.3rem .8rem; }
+  .certificate-details { width: 100%; grid-template-columns: 1fr; }
+  .certificate-details div + div { border-left: 0; border-top: 1px solid var(--line); margin-top: .7rem; padding-top: .7rem; }
+}
+
+@media print {
+  body.thank-you-page > * { display: none !important; }
+  body.thank-you-page main { display: block !important; }
+  body.thank-you-page main > * { display: none !important; }
+  body.thank-you-page .section { display: block !important; padding: 0 !important; }
+  body.thank-you-page .certificate-layout { display: block !important; width: 100% !important; }
+  body.thank-you-page .certificate-copy { display: none !important; }
+  body.thank-you-page .certificate-preview { display: block !important; box-shadow: none; border: 0; width: 100%; min-height: 96vh; aspect-ratio: auto; }
+}
 
 
 /* Bilingual navigation and Chinese typography */

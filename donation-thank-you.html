@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thank you for supporting the Wuwei Foundation. Create a branded acknowledgement certificate for your donation.">
+  <meta name="theme-color" content="#0a5a3d">
+  <title>Thank You for Your Support — Wuwei Foundation</title>
+  <link rel="icon" href="assets/icon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="alternate" hreflang="zh-CN" href="donation-thank-you-zh.html">
+</head>
+<body class="thank-you-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Wuwei Foundation home">
+        <img src="assets/wuwei-foundation-logo.png" alt="Wuwei Foundation symbol">
+        <span>Wuwei Foundation<small>COMPASSION IN ACTION</small></span>
+      </a>
+      <div class="button-row">
+        <a class="btn btn-secondary" href="index.html#donate">Back to donations</a>
+        <a class="btn btn-secondary" href="donation-thank-you-zh.html" lang="zh-CN">中文</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero thank-you-hero">
+      <div class="narrow">
+        <span class="eyebrow">With gratitude</span>
+        <h1>Thank you for helping compassion move.</h1>
+        <p class="lede">Your support helps nurture vulnerable beginnings, strengthen communities, and protect life in its many forms.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container certificate-layout">
+        <div class="certificate-copy">
+          <span class="eyebrow">Donor acknowledgement</span>
+          <h2>Create your certificate of appreciation.</h2>
+          <p>Enter the details you would like displayed. You can download a branded PNG certificate or use your browser’s print function to save the page as a PDF.</p>
+
+          <form id="certificate-form" class="certificate-form">
+            <div class="field">
+              <label for="donor-name">Name to display</label>
+              <input id="donor-name" name="donorName" autocomplete="name" placeholder="Your name or organisation">
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="donation-amount">Donation amount</label>
+                <input id="donation-amount" name="amount" placeholder="e.g. €50">
+              </div>
+              <div class="field">
+                <label for="donation-date">Donation date</label>
+                <input id="donation-date" name="date" type="date">
+              </div>
+            </div>
+            <div class="field">
+              <label for="donation-reference">Payment reference <span class="optional">(optional)</span></label>
+              <input id="donation-reference" name="reference" placeholder="Stripe receipt or payment reference">
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Download certificate</button>
+              <button class="btn btn-secondary" type="button" id="print-certificate">Print / Save as PDF</button>
+            </div>
+            <p class="certificate-status" id="certificate-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="notice certificate-notice">
+            <strong>Important:</strong> This is a certificate of appreciation and acknowledgement of support. It is not an official tax-deductible donation receipt. When Stripe donations are activated, the payment receipt can be sent separately by Stripe.
+          </div>
+        </div>
+
+        <article class="certificate-preview" id="certificate-preview" aria-label="Certificate preview">
+          <div class="certificate-border">
+            <img src="assets/wuwei-foundation-logo.png" alt="" class="certificate-logo">
+            <span class="certificate-overline">Wuwei Foundation · 无畏基金会</span>
+            <h2>Certificate of Appreciation</h2>
+            <p class="certificate-subtitle">Presented with heartfelt gratitude to</p>
+            <strong class="certificate-name" data-certificate-name>Our Valued Supporter</strong>
+            <p class="certificate-message">for helping nurture life, restore hope, and grow courage through compassionate action.</p>
+            <dl class="certificate-details">
+              <div><dt>Contribution</dt><dd data-certificate-amount>With gratitude</dd></div>
+              <div><dt>Date</dt><dd data-certificate-date>—</dd></div>
+              <div class="certificate-reference-row" hidden><dt>Reference</dt><dd data-certificate-reference></dd></div>
+            </dl>
+            <div class="certificate-signoff">
+              <span></span>
+              <strong>Wuwei Foundation · 无畏基金会</strong>
+              <small>Compassion in Action</small>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="assets/wuwei-foundation-logo-light.png" alt="Wuwei Foundation symbol"><h3>Wuwei Foundation</h3><p>Nurturing life, restoring hope, and helping communities grow in courage.</p></div>
+        <div class="footer-col"><h3>Explore</h3><a href="index.html">Home</a><a href="index.html#work">Our Work</a><a href="transparency.html">Transparency</a></div>
+        <div class="footer-col"><h3>Contact</h3><a href="mailto:info@wuwei-institute.com">info@wuwei-institute.com</a><a href="index.html#donate">Donate</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year></span> Stichting Wuwei Foundation</span><span>Thank you for supporting compassionate action.</span></div>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+  <script src="assets/certificate.js"></script>
+</body>
+</html>
