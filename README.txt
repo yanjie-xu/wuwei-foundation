@@ -49,8 +49,7 @@ The donation buttons are already prepared but disabled.
 When payment accounts are ready, edit assets/donation-config.js:
 - paste the one-time Payment Link
 - paste the monthly Payment Link
-- add WeChat Pay and Alipay payment links or QR-code landing page links when available
-- enable supported options such as Visa, Mastercard, American Express, PayPal, iDEAL, WeChat Pay and Alipay
+- enable supported methods such as Visa, Mastercard, American Express, PayPal, iDEAL, WeChat Pay and Alipay inside the one-time and monthly hosted payment options
 - change enabled from false to true
 
 Set payment links to redirect successful donors to:

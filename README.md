@@ -22,11 +22,10 @@ The donation interface is already built and remains in a safe â€œAvailable soonâ
 When the payment accounts are ready:
 
 1. Create live **one-time donation** and **monthly donation** payment links.
-2. Enable available payment methods such as Visa, Mastercard, American Express, PayPal, iDEAL, Apple Pay, Google Pay, WeChat Pay and Alipay where supported by the payment provider.
-3. Add WeChat Pay and Alipay QR-code details or links when those accounts are available.
-4. Set payment links to redirect successful donors to:
+2. Enable available payment methods such as Visa, Mastercard, American Express, PayPal, iDEAL, Apple Pay, Google Pay, WeChat Pay and Alipay within those two hosted payment options where supported.
+3. Set payment links to redirect successful donors to:
    `https://YOUR-DOMAIN/donation-thank-you.html`
-5. Open `assets/donation-config.js`, paste the URLs or payment details, and change `enabled` to `true`.
+4. Open `assets/donation-config.js`, paste the two URLs, and change `enabled` to `true`.
 
 No other website code needs to be edited.
 

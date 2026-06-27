@@ -8,12 +8,10 @@
  *    https://YOUR-DOMAIN/donation-thank-you.html
  *
  * The oneTime and monthly links may use Stripe or another hosted payment provider.
- * WeChat Pay and Alipay can be added as payment links or QR-code landing pages.
+ * Supported methods, including WeChat Pay and Alipay, should be enabled within those two hosted payment options where available.
  */
 window.WUWEI_DONATION_CONFIG = {
   enabled: false,
   oneTime: "",
-  monthly: "",
-  wechatPay: "",
-  alipay: ""
+  monthly: ""
 };

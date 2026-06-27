@@ -471,7 +471,7 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
 .donation-status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
 .donation-status.is-live { color: var(--forest-deep); background: #f9eef1; border-color: rgba(134,38,51,.28); }
 .donation-status.is-live::before { background: var(--jade); box-shadow: 0 0 0 5px rgba(134,38,51,.14); }
-.donation-options { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; margin-top: 2.4rem; }
+.donation-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin-top: 2.4rem; }
 .donation-card {
   display: flex;
   flex-direction: column;
